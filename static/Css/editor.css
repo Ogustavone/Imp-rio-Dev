@@ -9,7 +9,7 @@ body{
 
 ::selection{
   color: var(--text-color);
-  background: #6208ac;
+  background: #6b04af ;
 }
 .wrapper{
   margin-left: 500px;

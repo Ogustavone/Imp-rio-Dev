@@ -15,26 +15,26 @@ if (localStorage.getItem("token") == null) {
   }
 
   function searchSlots() {
-    // Obter o valor da pesquisa
+   
     const query = document.getElementById('searchBar').value.toLowerCase();
-    const slots = document.querySelectorAll('.slot'); // Todos os slots
+    const slots = document.querySelectorAll('.slot'); 
 
-    // Para cada slot
+    
     slots.forEach(slot => {
-        const slotName = slot.getAttribute('data-name').toLowerCase(); // Nome do slot em minúsculas
+        const slotName = slot.getAttribute('data-name').toLowerCase(); 
 
-        // Se o nome do slot contém a pesquisa, destaque o slot
+        
         if (slotName.includes(query)) {
-            slot.classList.add('highlight'); // Destaca o slot
-            slot.classList.remove('hidden'); // Torna o slot visível
+            slot.classList.add('highlight');
+            slot.classList.remove('hidden');
         } else {
-            slot.classList.remove('highlight'); // Remove destaque
-            slot.classList.add('hidden'); // Esconde o slot
+            slot.classList.remove('highlight');
+            slot.classList.add('hidden');
         }
     });
 }
 
-// Adiciona o evento de 'input' para buscar enquanto digita
+
 document.getElementById('searchBar').addEventListener('input', searchSlots);
 
 
