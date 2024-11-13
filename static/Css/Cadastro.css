@@ -7,7 +7,7 @@
 }
 
 body {
-  background: url("/static/img/32.png");
+  background: url("/static/img/34.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed
@@ -80,8 +80,8 @@ h1{
 
 button{
   background-color: transparent;
-  border-color: #0d009c;
-  color: #0d009c;
+  border-color: #390085;
+  color: #390085;
   padding: 7px;
   font-weight: bold;
   font-size: 12pt;
@@ -93,7 +93,7 @@ button{
 }
 
 button:hover{
-  background-color: #0d009c;
+  background-color: #390085;
   color: #fff;
 }
 
