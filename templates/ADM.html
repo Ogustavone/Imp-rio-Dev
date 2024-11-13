@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
 
-    <link rel="stylesheet" href="/static/Css/projetos.css">
-    <script src="/static/Js/projetos.js" defer></script>
+    <link rel="stylesheet" href="/static/Css/ADM.css">
+    <script src="/static/Js/ADM.js" defer></script>
 
     <title>Império Dev</title> 
 
@@ -45,44 +45,21 @@
         <div class="search-container">
             <input type="text" id="searchBar" placeholder="Digite para buscar...">
         </div>
+       
+    <div class="filtro">
+        <select id="userTypeFilter" onchange="filterUsers()">
+            <option value="">Todos os Tipos</option>
+            <option value="admin">Admin</option>
+            <option value="user">Usuário</option>
+            <option value="guest">Convidado</option>
+        </select>
+    </div>
+
+        <!-- Lista de Usuários -->
+        <ul class="userlist" id="userList"></ul>
+    </div>
     
-        <div class="slots-container" id="slotsContainer">
-            
-            <a href="todos" class="slot" data-name="Todos os processos">
-                <img src="/static/img/allprocess-removebg-preview.png" alt="Todos os processos">
-                <span>Todos os processos</span>
-            </a>
-    
-            
-            <a href="cadeia" class="slot" data-name="Cadeia de processos">
-                <img src="/static/img/cadeia-removebg-preview.png" alt="Cadeia de processos">
-                <span>Cadeia de processos</span>
-            </a>
-    
-            
-            <a href="interdepartamentais" class="slot" data-name="Processos Interdepartamentais">
-                <img src="/static/img/interdepartamentais-removebg-preview.png" alt="Processos Interdepartamentais">
-                <span>Processos Interdepartamentais</span>
-            </a>
-    
-            
-            <a href="depertamento" class="slot" data-name="Processos por departamento">
-                <img src="/static/img/departament-removebg-preview.png" alt="Processos por departamento">
-                <span>Processos por departamento</span>
-            </a>
-    
-            
-            <a href="inativo" class="slot" data-name="Processos inativos">
-                <img src="/static/img/inativo-removebg-preview.png" alt="Processos inativos">
-                <span>Processos inativos</span>
-            </a>
-    
-           
-            <a href="editor" class="slot" data-name="Adicionar e excluir processo">
-                <img src="/img/Editor.png" alt="Adicionar e excluir processo">
-                <span>Adicionar e excluir processo</span>
-            </a>
-        </div>
+       
 
         
         

@@ -1,0 +1,306 @@
+/* ESTILO GERAL */
+
+:root{
+    --base-color: #6b04af ;
+    --base-variant: #e8e9ed;
+    --text-color: #111528;
+    --secondary-text: #232738;
+    --primary-color: #3a435d;
+    --accent-color: #5a189a;
+  }
+  
+  .dark{
+    --base-color: #070b1d;
+    --base-variant: #101425;
+    --text-color: #ffffff;
+    --secondary-text: #a4a5b8;
+    --primary-color: #3a435d;
+    --accent-color: #0071ff;
+}
+
+button{
+    border: none;
+    padding: .8em 2em;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 4px;
+    font: inherit;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  #theme-switch{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--base-variant);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+  #theme-switch svg{
+    fill: var(--primary-color);
+  }
+  #theme-switch svg:last-child{
+    display: none;
+  }
+  .darkmode #theme-switch svg:first-child{
+    display: none;
+  }
+  .darkmode #theme-switch svg:last-child{
+    display: block;
+  }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--base-color);
+    color: var(--text-color);
+    height: 100vh;
+}
+
+
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: var(--base-color);
+    color: var(--text-color);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+h2.titulo {
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span {
+    color: var(--text-color);
+}
+
+button:hover,
+form .btn-enviar input:hover {
+    box-shadow: 0px 0px 8px #e0aaff;
+    transform: scale(1.05);
+}
+
+/* ESTILO DO CABEÇALHO */
+header {
+    padding: 40px 4%;
+}
+
+header>.interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: center;
+}
+
+header a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header nav.menu-desktop a:hover {
+    color: var(--text-color);
+    transform: scale(1.05);
+}
+
+header nav ul {
+    list-style-type: none;
+    align-content: center;
+}
+
+nav.menu-desktop{
+    display: flex;
+    justify-content: center;
+}
+
+header nav.menu-desktop ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+img.cabecalho-imagem{
+    height: 100px;
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@media(max-width: 800px){
+    .hideOnMobile{
+      display: none;
+    }
+    .menu-button{
+      display: block;
+    }
+  }
+  @media(max-width: 400px){
+    .sidebar{
+      width: 100%;
+    }
+  }
+
+/* ESTILO DO TOPO DO SITE */
+section.topo-do-site {
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1 {
+    color: var(--text-color);
+    font-size: 42px;
+    line-height: 40px;
+}
+
+.topo-do-site .txt-topo-site h1 span {
+    color: var(--text-color);
+}
+
+.topo-do-site .txt-topo-site p {
+    color: var(--text-color);
+    margin: 40px 0;
+}
+
+
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 30px;
+    }
+}
+
+
+
+
+/* ESTILO DO RODAPÉ */
+
+footer {
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+footer .flex {
+    justify-content: space-between;
+}
+
+footer .line-footer {
+    padding: 20px 0;
+}
+
+.imagem-logo-footer{
+    height: 100px;
+}
+
+.borda {
+    border-top: 2px solid white;
+}
+
+footer .line-footer p i {
+    color: var(--text-color);
+    font-size: 22px;
+}
+
+footer .line-footer p a {
+    color: var(--text-color);
+}
+
+/* ADM */
+
+.filtro{
+    margin-left: 500px;
+}
+
+.userlist {
+    list-style-type: none;
+    padding: 0;
+}
+
+.userlist{
+    padding: 10px;
+    margin: 10px 0;
+    background: #5a189a;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    width: 700px;
+    height: 150px;
+    margin-left: 500px;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+    border: none;
+    margin-bottom: 300px;
+}
+
+
+.user-info {
+    display: flex;
+    flex-direction: row; /* Organiza os dados na horizontal */
+    gap: 15px; /* Espaçamento entre os dados */
+}
+
+.user-info span {
+    font-size: 14px;
+    color: #555;
+}
+
+.user-info .id {
+    font-weight: bold;
+}
+
+.user-info .type {
+    font-style: italic;
+    color: #777;
+}
+
+.search-container {
+    margin: 20px auto;
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 60%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}

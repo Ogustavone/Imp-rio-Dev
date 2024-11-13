@@ -22,5 +22,9 @@ def projetos():
 def editor():
     return render_template('editor.html')
 
+@app.route('/ADM')
+def ADM():
+    return render_template('ADM.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
