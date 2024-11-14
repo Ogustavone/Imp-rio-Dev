@@ -61,13 +61,16 @@ input{
 
   color: rgba(255, 255, 255, 0.568);
   font-size: 16px;
-    
+  transition: all 700ms linear;
+}
+
+input:-webkit-autofill  {
+  border-radius: 18px;
 }
 
 input:focus{
   outline: none;
 }
-
 
 label{
   width: min(310px, 100%);

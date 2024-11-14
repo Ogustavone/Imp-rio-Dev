@@ -9,6 +9,7 @@
 body {
     background: linear-gradient(68.15deg, #9900ff 16.62%, #5a189a 85.61%);
     height: 100vh;
+    overflow-x: hidden
 }
 
 /* Modo Escuro */
@@ -22,8 +23,11 @@ header.dark-mode {
 }
 
 button.dark-mode {
-    background: #333;
+    background: #35193d;
     color: white;
+    outline: none; border:none;
+    padding: 3px;
+    border-radius: 8px
 }
 
 
@@ -304,8 +308,14 @@ footer .line-footer p a {
 
 /* ADM */
 
+main { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .filtro{
-    margin-left: 500px;
+    display: flex;
+    margin: 0 auto;
 }
 
 .userlist {
@@ -317,19 +327,22 @@ footer .line-footer p a {
     padding: 10px;
     margin: 10px 0;
     background: #5a189a;
-    border-radius: 5px;
+    border-radius: 8px;
     border: 1px solid #ddd;
     display: flex;
     align-items: stretch;
     flex-direction: column;
     width: 700px;
-    height: 150px;
     justify-content: center;
     align-content: flex-start;
     flex-wrap: nowrap;
     border: none;
-    
 }
+
+.userlist li {
+    margin: 12px 0;
+}
+
 
 .grid{
     display: flex;
@@ -345,9 +358,9 @@ footer .line-footer p a {
     gap: 15px; /* Espaçamento entre os dados */
 }
 
-.user-info span {
+.user-info span, .id{
     font-size: 14px;
-    color: #555;
+    color: #ffffffb6;
 }
 
 .user-info .id {
@@ -356,10 +369,11 @@ footer .line-footer p a {
 
 .user-info .type {
     font-style: italic;
-    color: #777;
+    color: #ffffff;
 }
 
 .search-container {
+    width: min(600px, 100%);
     margin: 20px auto;
     text-align: center;
 }
@@ -398,33 +412,79 @@ footer .line-footer p a {
     margin-bottom: 200px;
 }
 
-.editor{
-    display: inline-grid;
-    justify-content: center;
-    align-items: center;
-    align-content: stretch;
-    background: black;
-    padding: 10px;
-    width: 380px;
-    height: 260px;
-    border-radius: 50px;
-    margin: 50px;
-    margin-bottom: 300px;
-    margin-left: 400px;
-    justify-items: stretch;
+.add_usuario_main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 50%;
+    margin: auto;
 }
 
-.usuarios{
-    background: black;
-    width: 300px;
-    height: 170px;
-    padding: 15px;
-    margin: 50px;
-    margin-bottom: 80px;
-    border-radius: 30px;
-    display: inline-grid;
-    justify-items: stretch;
-    justify-content: center;
-    align-content: space-between;
+.editor, .usuarios{
+    margin: 0 auto;
+    padding: 15px 30px;
+    border-radius: 18px;
+    background: linear-gradient(70deg, rgb(130, 37, 218), #5a189a);
+    box-shadow: 0 10px 10px #00000044;
+    color: white;
+}
+
+.editor form {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.editor h2, .usuarios h2{
+    color: white;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.editor input {
+    width: 100%;
+    height: 32px;
+    padding: 0 15px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.editor select {
+    width: 120px;
+    height: 32px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.editor button {
+    width: 50%;
+    padding: 0 12px;
+    margin: auto;
+    height: 32px;
+    border-radius: 6px;
+    border: none;
+}
+
+.editor .label3 {
+    margin: 30px auto 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
     align-items: center;
+}
+
+.usuarios table {
+    width: 100%;
+}
+
+.usuarios table th {
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+.usuarios table td {
+    padding-bottom: 15px;
+    padding-left: 10px;
 }

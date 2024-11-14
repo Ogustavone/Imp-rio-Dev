@@ -49,6 +49,7 @@ button.dark-mode {
   }
   
   h2.titulo {
+    margin-bottom: 50px;
     color: #fff;
     font-size: 38px;
     text-align: center;
@@ -259,6 +260,8 @@ section.portfolio .flex {
     cursor: pointer;
     border-radius: 40px;
     position: relative;
+    filter: brightness(0.8);
+    
 }
 
 .img-port:hover {
@@ -272,13 +275,15 @@ section.portfolio .flex {
     width: 100%;
     height: 100%;
     background-color: #000000b8;
-    border-radius: 40px;
+    border-radius: 39px;
     display: flex;
     align-items: center;
     justify-content: center;
+
     font-size: 24px;
     font-weight: 600;
     color: #fff;
+
     opacity: 0;
     transition: .5s;
 }
@@ -286,10 +291,6 @@ section.portfolio .flex {
 .overlay:hover {
     opacity: 1;
 }
-
-
-
-
 
     /* PORTFÓLIO */
     section.portfolio {
