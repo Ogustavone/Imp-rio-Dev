@@ -18,33 +18,25 @@
 
         <div id="msgError"></div>
 
-        <div class="label-float">
-          <input type="text" id="usuario" paceholder="" required />
-          <label id="userLabel" for="usuario">Usuario</label>
-        </div>
-
-        <div class="label-float">
-          <input type="password" id="senha" paceholder="" required />
-          <label id="senhaLabel" for="senha">Senha</label>
-          <i class="fa fa-eye" aria-hidden="true"></i>
-        </div>
-
-        <div class="justify-center">
-          <button onclick="entrar()">Entrar</button>
-        </div>
+        <form action="login" method="POST">
+          <label for="username">Usuário</label>
+          <input type="text" name="username" id="username" required>
+          <label for="password">Senha</label>
+          <input type="password" name="password" id="password" required>
+          <button type="submit">Entrar</button>
+      </form>
 
         <div class="justify-center">
           <hr />
         </div>
 
-        <p>
-          Não tem uma conta?
-          <a href="/cadastro">
-            Cadastre-se
-          </a>
-        </p>
+        
       </div>
     </div>
+
+    <footer>
+      <p>&copy; 2024 Gestão de Processos. Todos os direitos reservados.</p>
+    </footer>
 
     <script src="/static/Js/login.js"></script>
   </body>

@@ -35,12 +35,32 @@ h1{
   color: #272262
 }
 
-.label-float input{
+form{
+  margin: 5px;
+    padding: 10px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    justify-items: center;
+}
+
+input{
+  width: 310px;
+  height: 40px;
+  text-align: justify;
+  background: none;
+  border-style: none;
+  font-size: larger;
+  text-decoration: none;
+}
+
+label{
   width: 100%;
   padding: 5px 5px;
   display: inline-block;
   border: 0;
-  border-bottom: 2px solid #272262;
+  border-bottom: 2px solid #49005f;
   background-color: transparent;
   outline: none;
   min-width: 180px;
@@ -50,38 +70,10 @@ h1{
   
 }
 
-.label-float{
-  position: relative;
-  padding-top: 13px;
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-
-.label-float input:focus{
-  border-bottom: 2px solid #4038a0;
-}
-
-.label-float label{
-  color: #272262;
-  pointer-events: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-top: 13px;
-  transition: all .3s ease-out;
-}
-
-.label-float input:focus + label,
-.label-float input:valid + label{
-  font-size: 13px;
-  margin-top: 0;
-  color: #4038a0
-}
-
 button{
   background-color: transparent;
-  border-color: #272262;
-  color: #272262;
+  border-color: #3d0061;
+  color: #49005f;
   padding: 7px;
   font-weight: bold;
   font-size: 12pt;
@@ -93,7 +85,7 @@ button{
 }
 
 button:hover{
-  background-color: #272262;
+  background-color: #49005f;
   color: #fff;
 }
 
@@ -140,4 +132,34 @@ a:hover{
   padding: 10px;
   border-radius: 4px;
   display: none;
+}
+
+footer {
+  padding: 40px 4%;
+  box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+footer .flex {
+  justify-content: space-between;
+}
+
+footer .line-footer {
+  padding: 20px 0;
+}
+
+.imagem-logo-footer{
+  height: 100px;
+}
+
+.borda {
+  border-top: 2px solid white;
+}
+
+footer .line-footer p i {
+  color: var(--text-color);
+  font-size: 22px;
+}
+
+footer .line-footer p a {
+  color: var(--text-color);
 }

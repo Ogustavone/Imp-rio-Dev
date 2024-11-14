@@ -22,14 +22,12 @@
             <nav class="menu-desktop">
                 <img class="cabecalho-imagem" src="/static/img/imperio_logo-removebg-preview.png" alt="Logo Império dev">
             
-                <ul class="sidebar">
-                    <button class="dark" id="theme-switch">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
-                      </button>
+                <ul>
                     <li><a href="/">Início</a></li>
                     <li><a href="ADM">Area Administrativa</a></li>
                     <li><a href="projetos">Projetos</a></li>
+                    <li id="darkModeToggle"><a href="#">Modo Escuro</a></li>
+                    <li id="languageToggle"><a href="#">EN</a></li>
                     <li><a onclick="sair()" href="login" class="cabecalho-menu-item"> Sair</a></li>
                 </ul>
 
@@ -49,37 +47,37 @@
         <div class="slots-container" id="slotsContainer">
             
             <a href="todos" class="slot" data-name="Todos os processos">
-                <img src="/static/img/allprocess-removebg-preview.png" alt="Todos os processos">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmNWY1ZjUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1nYWxsZXJ5LXZlcnRpY2FsLWVuZCI+PHBhdGggZD0iTTcgMmgxMCIvPjxwYXRoIGQ9Ik01IDZoMTQiLz48cmVjdCB3aWR0aD0iMTgiIGhlaWdodD0iMTIiIHg9IjMiIHk9IjEwIiByeD0iMiIvPjwvc3ZnPg==" alt="Todos os processos">
                 <span>Todos os processos</span>
             </a>
     
             
             <a href="cadeia" class="slot" data-name="Cadeia de processos">
-                <img src="/static/img/cadeia-removebg-preview.png" alt="Cadeia de processos">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmNWY1ZjUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1oYXJkLWRyaXZlLWRvd25sb2FkIj48cGF0aCBkPSJNMTIgMnY4Ii8+PHBhdGggZD0ibTE2IDYtNCA0LTQtNCIvPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSI4IiB4PSIyIiB5PSIxNCIgcng9IjIiLz48cGF0aCBkPSJNNiAxOGguMDEiLz48cGF0aCBkPSJNMTAgMThoLjAxIi8+PC9zdmc+" alt="Cadeia de processos">
                 <span>Cadeia de processos</span>
             </a>
     
             
             <a href="interdepartamentais" class="slot" data-name="Processos Interdepartamentais">
-                <img src="/static/img/interdepartamentais-removebg-preview.png" alt="Processos Interdepartamentais">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmNWY1ZjUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS11c2VycyI+PHBhdGggZD0iTTE2IDIxdi0yYTQgNCAwIDAgMC00LTRINmE0IDQgMCAwIDAtNCA0djIiLz48Y2lyY2xlIGN4PSI5IiBjeT0iNyIgcj0iNCIvPjxwYXRoIGQ9Ik0yMiAyMXYtMmE0IDQgMCAwIDAtMy0zLjg3Ii8+PHBhdGggZD0iTTE2IDMuMTNhNCA0IDAgMCAxIDAgNy43NSIvPjwvc3ZnPg==" alt="Processos Interdepartamentais">
                 <span>Processos Interdepartamentais</span>
             </a>
     
             
             <a href="depertamento" class="slot" data-name="Processos por departamento">
-                <img src="/static/img/departament-removebg-preview.png" alt="Processos por departamento">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmNWY1ZjUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1maWxlLXN0YWNrIj48cGF0aCBkPSJNMjEgN2gtM2EyIDIgMCAwIDEtMi0yVjIiLz48cGF0aCBkPSJNMjEgNnY2LjVjMCAuOC0uNyAxLjUtMS41IDEuNWgtN2MtLjggMC0xLjUtLjctMS41LTEuNXYtOWMwLS44LjctMS41IDEuNS0xLjVIMTdaIi8+PHBhdGggZD0iTTcgOHY4LjhjMCAuMy4yLjYuNC44LjIuMi41LjQuOC40SDE1Ii8+PHBhdGggZD0iTTMgMTJ2OC44YzAgLjMuMi42LjQuOC4yLjIuNS40LjguNEgxMSIvPjwvc3ZnPg==" alt="Processos por departamento">
                 <span>Processos por departamento</span>
             </a>
     
             
             <a href="inativo" class="slot" data-name="Processos inativos">
-                <img src="/static/img/inativo-removebg-preview.png" alt="Processos inativos">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmNWY1ZjUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1sYXllcnMiPjxwYXRoIGQ9Im0xMi44MyAyLjE4YTIgMiAwIDAgMC0xLjY2IDBMMi42IDYuMDhhMSAxIDAgMCAwIDAgMS44M2w4LjU4IDMuOTFhMiAyIDAgMCAwIDEuNjYgMGw4LjU4LTMuOWExIDEgMCAwIDAgMC0xLjgzWiIvPjxwYXRoIGQ9Im0yMiAxNy42NS05LjE3IDQuMTZhMiAyIDAgMCAxLTEuNjYgMEwyIDE3LjY1Ii8+PHBhdGggZD0ibTIyIDEyLjY1LTkuMTcgNC4xNmEyIDIgMCAwIDEtMS42NiAwTDIgMTIuNjUiLz48L3N2Zz4=" alt="Processos inativos">
                 <span>Processos inativos</span>
             </a>
     
            
             <a href="editor" class="slot" data-name="Adicionar e excluir processo">
-                <img src="/img/editor.png" alt="Adicionar e excluir processo">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmNWY1ZjUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1maWxlLXBlbi1saW5lIj48cGF0aCBkPSJtMTggNS0yLjQxNC0yLjQxNEEyIDIgMCAwIDAgMTQuMTcyIDJINmEyIDIgMCAwIDAtMiAydjE2YTIgMiAwIDAgMCAyIDJoMTJhMiAyIDAgMCAwIDItMiIvPjxwYXRoIGQ9Ik0yMS4zNzggMTIuNjI2YTEgMSAwIDAgMC0zLjAwNC0zLjAwNGwtNC4wMSA0LjAxMmEyIDIgMCAwIDAtLjUwNi44NTRsLS44MzcgMi44N2EuNS41IDAgMCAwIC42Mi42MmwyLjg3LS44MzdhMiAyIDAgMCAwIC44NTQtLjUwNnoiLz48cGF0aCBkPSJNOCAxOGgxIi8+PC9zdmc+" alt="Adicionar e excluir processo">
                 <span>Adicionar e excluir processo</span>
             </a>
         </div>
@@ -110,4 +108,5 @@
 
 
 </body>
+<script src="/static/Js/darkmode.js"></script>
 </html>

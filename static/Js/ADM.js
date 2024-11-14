@@ -1,6 +1,3 @@
-// script.js
-
-// Exemplo de dados de usuários, normalmente você pegaria do localStorage.
 const users = [
     { id: 1, name: "João", type: "admin" },
     { id: 2, name: "Maria", type: "user" },
@@ -10,19 +7,19 @@ const users = [
     { id: 6, name: "Beatriz", type: "guest" }
 ];
 
-// Salvar no localStorage
+
 localStorage.setItem("users", JSON.stringify(users));
 
-// Função para exibir a lista de usuários
+
 function displayUsers(filteredUsers) {
     const userList = document.getElementById("userList");
-    userList.innerHTML = ''; // Limpa a lista existente
+    userList.innerHTML = ''; 
 
     filteredUsers.forEach(user => {
         const li = document.createElement("li");
-        li.classList.add(user.type); // Adiciona uma classe para personalizar o tipo
+        li.classList.add(user.type); 
 
-        // Estrutura do item da lista com nome, tipo e id
+        
         const userInfo = document.createElement("div");
         userInfo.classList.add("user-info");
 
@@ -46,7 +43,7 @@ function displayUsers(filteredUsers) {
     });
 }
 
-// Função para filtrar usuários por tipo
+
 function filterUsers() {
     const filter = document.getElementById("userTypeFilter").value;
     const users = JSON.parse(localStorage.getItem("users"));
@@ -54,7 +51,7 @@ function filterUsers() {
     displayUsers(filteredUsers);
 }
 
-// Função para buscar usuários pelo nome
+
 function searchUsers() {
     const searchQuery = document.getElementById("searchInput").value.toLowerCase();
     const users = JSON.parse(localStorage.getItem("users"));
@@ -62,7 +59,7 @@ function searchUsers() {
     displayUsers(filteredUsers);
 }
 
-// Carregar todos os usuários ao iniciar a página
+
 document.addEventListener("DOMContentLoaded", function () {
     const users = JSON.parse(localStorage.getItem("users"));
     displayUsers(users);
