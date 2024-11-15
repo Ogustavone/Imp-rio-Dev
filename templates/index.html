@@ -1,84 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/static/Css/homepage.css">
-    <link rel="stylesheet" href="/static/Css/header.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="/static/Css/homepage.css" />
+    <link rel="stylesheet" href="/static/Css/header.css" />
 
-    <title>Império Dev</title> 
-
-</head>
-<body>
-    
+    <title>Império Dev</title>
+  </head>
+  <body>
     <header>
-      
-            <nav class="menu-desktop">
-                <img class="cabecalho-imagem" src="/static/img/imperio_logo-removebg-preview.png" alt="Logo Império dev">
-            
-                <ul>
-                    <li><a href="/">Início</a></li>
-                    <li><a href="ADM">Area Administrativa</a></li>
-                    <li><a href="projetos">Projetos</a></li>
-                    <li id="darkModeToggle"><a href="#">Modo Escuro</a></li>
-                    <li><a onclick="sair()" href="login" class="cabecalho-menu-item"> Sair</a></li>
-                </ul>
-            </nav>
+      <nav class="menu-desktop">
+        <img
+          class="cabecalho-imagem"
+          src="/static/img/imperio_logo-removebg-preview.png"
+          alt="Logo Império dev"
+        />
 
-
-
-
-            
-       
+        <ul>
+          <li><a href="/">Início</a></li>
+          <li><a href="ADM">Area Administrativa</a></li>
+          <li><a href="projetos">Projetos</a></li>
+          <li id="darkModeToggle"><a href="#">Modo Escuro</a></li>
+          <li>
+            <a onclick="sair()" href="login" class="cabecalho-menu-item">
+              Sair</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        
-
-        <section>
-            <div class="interface">
-                <h2 class="titulo">PROJETOS <span>RECENTES</span></h2>
-                <div class="flex">
-                    <div class="img-port" style="background-image: url(/static/img/bpmn2.png);">
-                        <div class="overlay">Projeto 1</div>
-                    </div>
-                    <div class="img-port" style="background-image: url(/static/img/exemplos-de-diagramas-bpmn-03.jpg);">
-                        <div class="overlay">Projeto 2</div>
-                    </div>
-                    <div class="img-port" style="background-image: url(/static/img/bpmn.png);">
-                        <div class="overlay">Projeto 3</div>
-                    </div>
-                </div><!--flex-->
-            </div><!--interface-->
-        </section><!--portfolio-->
-
-        
-
+      <section>
+        <div class="interface">
+          <h2 class="titulo">PROJETOS <span>RECENTES</span></h2>
+          <div class="flex">
+            <div
+              class="img-port"
+              style="background-image: url(/static/img/bpmn2.png)"
+            >
+              <div class="overlay">Projeto 1</div>
+            </div>
+            <div
+              class="img-port"
+              style="
+                background-image: url(/static/img/exemplos-de-diagramas-bpmn-03.jpg);
+              "
+            >
+              <div class="overlay">Projeto 2</div>
+            </div>
+            <div
+              class="img-port"
+              style="background-image: url(/static/img/bpmn.png)"
+            >
+              <div class="overlay">Projeto 3</div>
+            </div>
+          </div>
+          <!--flex-->
+        </div>
+        <!--interface-->
+      </section>
+      <!--portfolio-->
     </main>
 
     <footer>
-        <div class="interface">
-            <div class="line-footer">
-                <div class="flex">
-                    <div class="logo-footer">
-                        <img class="imagem-logo-footer" src="/static/img/logoimperio2.png" alt="Logotipo imperio">
-                    </div><!--logo-footer-->
-                </div>
-            </div><!--line-footer-->
+      <div class="interface">
+        <div class="line-footer">
+          <div class="flex">
+            <div class="logo-footer">
+              <img
+                class="imagem-logo-footer"
+                src="/static/img/logoimperio2.png"
+                alt="Logotipo imperio"
+              />
+            </div>
+            <!--logo-footer-->
+          </div>
+        </div>
+        <!--line-footer-->
 
-            <div class="line-footer borda">
-            
-            <p><i class="bi bi-envelope-fill"></i> <a href="mailto:contato@imperiodev.com.br">contato@imperiodev.com.br</a></p>
-              
-        </div><!--interface-->
-            </div><!--line-footer-->
+        <div class="line-footer borda">
+          <p>
+            <i class="bi bi-envelope-fill"></i>
+            <a href="mailto:contato@imperiodev.com.br"
+              >contato@imperiodev.com.br</a
+            >
+          </p>
+        </div>
+        <!--interface-->
+      </div>
+      <!--line-footer-->
     </footer>
-
-
-</body>
-<script src="/static/Js/darkmode.js"></script>
+  </body>
+  <script src="/static/Js/darkmode.js"></script>
 </html>

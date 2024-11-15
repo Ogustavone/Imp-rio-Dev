@@ -1,112 +1,136 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
 
-
-    <link rel="stylesheet" href="/static/Css/projetos.css">
-    <link rel="stylesheet" href="/static/Css/header.css">
+    <link rel="stylesheet" href="/static/Css/projetos.css" />
+    <link rel="stylesheet" href="/static/Css/header.css" />
     <script src="/static/Js/projetos.js" defer></script>
 
-    <title>Império Dev</title> 
-
-</head>
-<body>
-    
+    <title>Império Dev</title>
+  </head>
+  <body>
     <header>
+      <nav class="menu-desktop">
+        <img
+          class="cabecalho-imagem"
+          src="/static/img/imperio_logo-removebg-preview.png"
+          alt="Logo Império dev"
+        />
 
-            <nav class="menu-desktop">
-                <img class="cabecalho-imagem" src="/static/img/imperio_logo-removebg-preview.png" alt="Logo Império dev">
-            
-                <ul>
-                    <li><a href="/">Início</a></li>
-                    <li><a href="ADM">Area Administrativa</a></li>
-                    <li><a href="projetos">Projetos</a></li>
-                    <li id="darkModeToggle"><a href="#">Modo Escuro</a></li>
-                    <li><a onclick="sair()" href="login" class="cabecalho-menu-item"> Sair</a></li>
-                </ul>
-
-            </nav>
-
-
-
-
+        <ul>
+          <li><a href="/">Início</a></li>
+          <li><a href="ADM">Area Administrativa</a></li>
+          <li><a href="projetos">Projetos</a></li>
+          <li id="darkModeToggle"><a href="#">Modo Escuro</a></li>
+          <li>
+            <a onclick="sair()" href="login" class="cabecalho-menu-item">
+              Sair</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main>
+      <div class="search-container">
+        <input type="text" id="searchBar" placeholder="Digite para buscar..." />
+      </div>
 
-        <div class="search-container">
-            <input type="text" id="searchBar" placeholder="Digite para buscar...">
-        </div>
-    
-        <div class="slots-container" id="slotsContainer">
-            
-            <a href="todos" class="slot" data-name="Todos os processos">
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmNWY1ZjUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1nYWxsZXJ5LXZlcnRpY2FsLWVuZCI+PHBhdGggZD0iTTcgMmgxMCIvPjxwYXRoIGQ9Ik01IDZoMTQiLz48cmVjdCB3aWR0aD0iMTgiIGhlaWdodD0iMTIiIHg9IjMiIHk9IjEwIiByeD0iMiIvPjwvc3ZnPg==" alt="Todos os processos">
-                <span>Todos os processos</span>
-            </a>
-    
-            
-            <a href="cadeia" class="slot" data-name="Cadeia de processos">
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmNWY1ZjUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1oYXJkLWRyaXZlLWRvd25sb2FkIj48cGF0aCBkPSJNMTIgMnY4Ii8+PHBhdGggZD0ibTE2IDYtNCA0LTQtNCIvPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSI4IiB4PSIyIiB5PSIxNCIgcng9IjIiLz48cGF0aCBkPSJNNiAxOGguMDEiLz48cGF0aCBkPSJNMTAgMThoLjAxIi8+PC9zdmc+" alt="Cadeia de processos">
-                <span>Cadeia de processos</span>
-            </a>
-    
-            
-            <a href="interdepartamentais" class="slot" data-name="Processos Interdepartamentais">
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmNWY1ZjUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS11c2VycyI+PHBhdGggZD0iTTE2IDIxdi0yYTQgNCAwIDAgMC00LTRINmE0IDQgMCAwIDAtNCA0djIiLz48Y2lyY2xlIGN4PSI5IiBjeT0iNyIgcj0iNCIvPjxwYXRoIGQ9Ik0yMiAyMXYtMmE0IDQgMCAwIDAtMy0zLjg3Ii8+PHBhdGggZD0iTTE2IDMuMTNhNCA0IDAgMCAxIDAgNy43NSIvPjwvc3ZnPg==" alt="Processos Interdepartamentais">
-                <span>Processos Interdepartamentais</span>
-            </a>
-    
-            
-            <a href="depertamento" class="slot" data-name="Processos por departamento">
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmNWY1ZjUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1maWxlLXN0YWNrIj48cGF0aCBkPSJNMjEgN2gtM2EyIDIgMCAwIDEtMi0yVjIiLz48cGF0aCBkPSJNMjEgNnY2LjVjMCAuOC0uNyAxLjUtMS41IDEuNWgtN2MtLjggMC0xLjUtLjctMS41LTEuNXYtOWMwLS44LjctMS41IDEuNS0xLjVIMTdaIi8+PHBhdGggZD0iTTcgOHY4LjhjMCAuMy4yLjYuNC44LjIuMi41LjQuOC40SDE1Ii8+PHBhdGggZD0iTTMgMTJ2OC44YzAgLjMuMi42LjQuOC4yLjIuNS40LjguNEgxMSIvPjwvc3ZnPg==" alt="Processos por departamento">
-                <span>Processos por departamento</span>
-            </a>
-    
-            
-            <a href="inativo" class="slot" data-name="Processos inativos">
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmNWY1ZjUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1sYXllcnMiPjxwYXRoIGQ9Im0xMi44MyAyLjE4YTIgMiAwIDAgMC0xLjY2IDBMMi42IDYuMDhhMSAxIDAgMCAwIDAgMS44M2w4LjU4IDMuOTFhMiAyIDAgMCAwIDEuNjYgMGw4LjU4LTMuOWExIDEgMCAwIDAgMC0xLjgzWiIvPjxwYXRoIGQ9Im0yMiAxNy42NS05LjE3IDQuMTZhMiAyIDAgMCAxLTEuNjYgMEwyIDE3LjY1Ii8+PHBhdGggZD0ibTIyIDEyLjY1LTkuMTcgNC4xNmEyIDIgMCAwIDEtMS42NiAwTDIgMTIuNjUiLz48L3N2Zz4=" alt="Processos inativos">
-                <span>Processos inativos</span>
-            </a>
-    
-           
-            <a href="editor" class="slot" data-name="Adicionar e excluir processo">
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmNWY1ZjUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1maWxlLXBlbi1saW5lIj48cGF0aCBkPSJtMTggNS0yLjQxNC0yLjQxNEEyIDIgMCAwIDAgMTQuMTcyIDJINmEyIDIgMCAwIDAtMiAydjE2YTIgMiAwIDAgMCAyIDJoMTJhMiAyIDAgMCAwIDItMiIvPjxwYXRoIGQ9Ik0yMS4zNzggMTIuNjI2YTEgMSAwIDAgMC0zLjAwNC0zLjAwNGwtNC4wMSA0LjAxMmEyIDIgMCAwIDAtLjUwNi44NTRsLS44MzcgMi44N2EuNS41IDAgMCAwIC42Mi42MmwyLjg3LS44MzdhMiAyIDAgMCAwIC44NTQtLjUwNnoiLz48cGF0aCBkPSJNOCAxOGgxIi8+PC9zdmc+" alt="Adicionar e excluir processo">
-                <span>Adicionar e excluir processo</span>
-            </a>
-        </div>
+      <div class="slots-container" id="slotsContainer">
+        <a href="todos" class="slot" data-name="Todos os processos">
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmNWY1ZjUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1nYWxsZXJ5LXZlcnRpY2FsLWVuZCI+PHBhdGggZD0iTTcgMmgxMCIvPjxwYXRoIGQ9Ik01IDZoMTQiLz48cmVjdCB3aWR0aD0iMTgiIGhlaWdodD0iMTIiIHg9IjMiIHk9IjEwIiByeD0iMiIvPjwvc3ZnPg=="
+            alt="Todos os processos"
+          />
+          <span>Todos os processos</span>
+        </a>
 
-        
-        
+        <a href="cadeia" class="slot" data-name="Cadeia de processos">
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmNWY1ZjUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1oYXJkLWRyaXZlLWRvd25sb2FkIj48cGF0aCBkPSJNMTIgMnY4Ii8+PHBhdGggZD0ibTE2IDYtNCA0LTQtNCIvPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSI4IiB4PSIyIiB5PSIxNCIgcng9IjIiLz48cGF0aCBkPSJNNiAxOGguMDEiLz48cGF0aCBkPSJNMTAgMThoLjAxIi8+PC9zdmc+"
+            alt="Cadeia de processos"
+          />
+          <span>Cadeia de processos</span>
+        </a>
 
+        <a
+          href="interdepartamentais"
+          class="slot"
+          data-name="Processos Interdepartamentais"
+        >
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmNWY1ZjUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS11c2VycyI+PHBhdGggZD0iTTE2IDIxdi0yYTQgNCAwIDAgMC00LTRINmE0IDQgMCAwIDAtNCA0djIiLz48Y2lyY2xlIGN4PSI5IiBjeT0iNyIgcj0iNCIvPjxwYXRoIGQ9Ik0yMiAyMXYtMmE0IDQgMCAwIDAtMy0zLjg3Ii8+PHBhdGggZD0iTTE2IDMuMTNhNCA0IDAgMCAxIDAgNy43NSIvPjwvc3ZnPg=="
+            alt="Processos Interdepartamentais"
+          />
+          <span>Processos Interdepartamentais</span>
+        </a>
+
+        <a
+          href="depertamento"
+          class="slot"
+          data-name="Processos por departamento"
+        >
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmNWY1ZjUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1maWxlLXN0YWNrIj48cGF0aCBkPSJNMjEgN2gtM2EyIDIgMCAwIDEtMi0yVjIiLz48cGF0aCBkPSJNMjEgNnY2LjVjMCAuOC0uNyAxLjUtMS41IDEuNWgtN2MtLjggMC0xLjUtLjctMS41LTEuNXYtOWMwLS44LjctMS41IDEuNS0xLjVIMTdaIi8+PHBhdGggZD0iTTcgOHY4LjhjMCAuMy4yLjYuNC44LjIuMi41LjQuOC40SDE1Ii8+PHBhdGggZD0iTTMgMTJ2OC44YzAgLjMuMi42LjQuOC4yLjIuNS40LjguNEgxMSIvPjwvc3ZnPg=="
+            alt="Processos por departamento"
+          />
+          <span>Processos por departamento</span>
+        </a>
+
+        <a href="inativo" class="slot" data-name="Processos inativos">
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmNWY1ZjUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1sYXllcnMiPjxwYXRoIGQ9Im0xMi44MyAyLjE4YTIgMiAwIDAgMC0xLjY2IDBMMi42IDYuMDhhMSAxIDAgMCAwIDAgMS44M2w4LjU4IDMuOTFhMiAyIDAgMCAwIDEuNjYgMGw4LjU4LTMuOWExIDEgMCAwIDAgMC0xLjgzWiIvPjxwYXRoIGQ9Im0yMiAxNy42NS05LjE3IDQuMTZhMiAyIDAgMCAxLTEuNjYgMEwyIDE3LjY1Ii8+PHBhdGggZD0ibTIyIDEyLjY1LTkuMTcgNC4xNmEyIDIgMCAwIDEtMS42NiAwTDIgMTIuNjUiLz48L3N2Zz4="
+            alt="Processos inativos"
+          />
+          <span>Processos inativos</span>
+        </a>
+
+        <a href="editor" class="slot" data-name="Adicionar e excluir processo">
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmNWY1ZjUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1maWxlLXBlbi1saW5lIj48cGF0aCBkPSJtMTggNS0yLjQxNC0yLjQxNEEyIDIgMCAwIDAgMTQuMTcyIDJINmEyIDIgMCAwIDAtMiAydjE2YTIgMiAwIDAgMCAyIDJoMTJhMiAyIDAgMCAwIDItMiIvPjxwYXRoIGQ9Ik0yMS4zNzggMTIuNjI2YTEgMSAwIDAgMC0zLjAwNC0zLjAwNGwtNC4wMSA0LjAxMmEyIDIgMCAwIDAtLjUwNi44NTRsLS44MzcgMi44N2EuNS41IDAgMCAwIC42Mi42MmwyLjg3LS44MzdhMiAyIDAgMCAwIC44NTQtLjUwNnoiLz48cGF0aCBkPSJNOCAxOGgxIi8+PC9zdmc+"
+            alt="Adicionar e excluir processo"
+          />
+          <span>Adicionar e excluir processo</span>
+        </a>
+      </div>
     </main>
 
     <footer>
-        <div class="interface">
-            <div class="line-footer">
-                <div class="flex">
-                    <div class="logo-footer">
-                        <img class="imagem-logo-footer" src="/static/img/logoimperio2.png" alt="Logotipo imperio">
-                    </div>
-                </div>
+      <div class="interface">
+        <div class="line-footer">
+          <div class="flex">
+            <div class="logo-footer">
+              <img
+                class="imagem-logo-footer"
+                src="/static/img/logoimperio2.png"
+                alt="Logotipo imperio"
+              />
             </div>
-
-            <div class="line-footer borda">
-            
-            <p><i class="bi bi-envelope-fill"></i> <a href="mailto:contato@imperiodev.com.br">contato@imperiodev.com.br</a></p>
-              
+          </div>
         </div>
-            </div>
+
+        <div class="line-footer borda">
+          <p>
+            <i class="bi bi-envelope-fill"></i>
+            <a href="mailto:contato@imperiodev.com.br"
+              >contato@imperiodev.com.br</a
+            >
+          </p>
+        </div>
+      </div>
     </footer>
-
-
-
-</body>
-<script src="/static/Js/darkmode.js"></script>
+  </body>
+  <script src="/static/Js/darkmode.js"></script>
 </html>
